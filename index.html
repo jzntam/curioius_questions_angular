@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en-us" ng-app='awesomeAngular'>
+  <head>
+    <title>Awesome Answers Client in AngularJS</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta charset="UTF-8">
+
+    <!-- load bootstrap and fontawesome via CDN -->
+    <link rel="stylesheet" href="//bootswatch.com/slate/bootstrap.min.css" />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="stylesheets/base.css" />
+
+    <!-- load angular via CDN -->
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
+    <script src="//code.angularjs.org/1.6.0/angular-route.min.js"></script>
+    <script src="//code.angularjs.org/1.6.0/angular-resource.min.js"></script>
+    <script src="javascripts/app.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-default">
+        <div class="container">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#/">
+              <span><img src="images/question.png" class="navbar-logo"></span>
+              <span>CuriousQuestions</span>
+            </a>
+          </div>
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a href="#/">
+                <i class="fa fa-2x fa-plane"></i>
+                <span style="font-size: 18px;"> Home</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <div class="container">
+      <div ng-view>
+      </div>
+    </div>
+
+  </body>
+</html>
