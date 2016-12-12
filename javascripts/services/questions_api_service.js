@@ -1,5 +1,6 @@
 awesomeAngular.service('QuestionsApiService', function($resource) {
-  var questionApi = $resource('http://localhost:3000/api/v1/questions');
+  var baseURL     = 'http://localhost:3000/api/v1/questions'
+  var questionApi = $resource(baseURL);
 
   this.allQuestions = function(){
     return questionApi.query();
@@ -9,7 +10,8 @@ awesomeAngular.service('QuestionsApiService', function($resource) {
     return questionApi.save(question);
   }
 
-  this.showQuestion = function(question) {
-    return questionApi.get(question);
+  this.showQuestion = function(questionId) {
+    var getQuestion = $resource(baseURL + '/:id', { id: '@id' });
+    return getQuestion.get({ id: questionId });
   }
 });

@@ -11,7 +11,7 @@ awesomeAngular.controller('homeController',
           .$promise.then(
             function success(response) {
               console.log(response)
-              $location.path('/question')
+              $location.path('/question/' + response.id)
             },
             function failure(response) {
               console.log(response)

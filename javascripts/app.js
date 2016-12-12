@@ -6,7 +6,7 @@ awesomeAngular.config(function($routeProvider) {
     templateUrl: 'javascripts/templates/home.html',
     controller: 'homeController'
   })
-  .when('/question', {
+  .when('/question/:id', {
     templateUrl: 'javascripts/templates/question.html',
     controller: 'questionController'
   })

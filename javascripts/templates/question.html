@@ -6,17 +6,18 @@
     <hr />
     <div class='panel panel-default'>
       <div class='panel-heading'>
-        <h3 class='panel-title'></h3>
+        <h3 class='panel-title'>{{ question.title }}</h3>
       </div>
       <div class='panel-body'>
-        <p></p>
+        <p>{{ question.body }}</p>
 
         <div>
-          <small><span>Views: </span></small>
+          <small><span>Views: {{ question.view_count }}</span></small>
         </div>
         <small>
           <em>
-            <span>Created By: </span>
+            <p>Created By: {{ question.user || 'Anonymous' }}</p>
+            <p>Posted On: {{ question.created_on }}</p>
           </em>
         </small>
       </div>
