@@ -1,3 +1,7 @@
+awesomeAngular.config(['$httpProvider', function($httpProvider) {
+  $httpProvider.defaults.headers.common.Authorization = 'Api Token goes here';
+}]);
+
 awesomeAngular.service('QuestionsApiService', function($resource) {
   var baseURL     = 'http://localhost:3000/api/v1/questions'
   var questionApi = $resource(baseURL);
